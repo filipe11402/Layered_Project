@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.Context
 {
-    class ApplicationDbContext: DbContext
+    public class ApplicationDbContext : DbContext, IApplicationDbContext
     {
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
@@ -16,6 +16,6 @@ namespace Infrastructure.Context
 
         }
 
-        public DbSet<Product> Products;
+        public DbSet<Product> Products { get; set; }
     }
 }
