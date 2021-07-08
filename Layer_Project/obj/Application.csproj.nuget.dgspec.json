@@ -4,12 +4,12 @@
     "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Layer_Project\\Layer_Project\\Application.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Layer_Project\\Domain\\Domain.csproj": {
+    "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Layer_Project\\Domain\\Project.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Layer_Project\\Domain\\Domain.csproj",
-        "projectName": "Domain",
-        "projectPath": "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Layer_Project\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Layer_Project\\Domain\\Project.Domain.csproj",
+        "projectName": "Project.Domain",
+        "projectPath": "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Layer_Project\\Domain\\Project.Domain.csproj",
         "packagesPath": "C:\\Users\\Filipe Encarnacao\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Layer_Project\\Domain\\obj\\",
         "projectStyle": "PackageReference",
@@ -39,6 +39,28 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[5.0.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.7, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -58,12 +80,12 @@
         }
       }
     },
-    "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Layer_Project\\Infrastructure\\Infrastructure.csproj": {
+    "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Layer_Project\\Infrastructure\\Project.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Layer_Project\\Infrastructure\\Infrastructure.csproj",
-        "projectName": "Infrastructure",
-        "projectPath": "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Layer_Project\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Layer_Project\\Infrastructure\\Project.Infrastructure.csproj",
+        "projectName": "Project.Infrastructure",
+        "projectPath": "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Layer_Project\\Infrastructure\\Project.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\Filipe Encarnacao\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Layer_Project\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
@@ -82,8 +104,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Layer_Project\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Layer_Project\\Domain\\Domain.csproj"
+              "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Layer_Project\\Domain\\Project.Domain.csproj": {
+                "projectPath": "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Layer_Project\\Domain\\Project.Domain.csproj"
               }
             }
           }
@@ -99,6 +121,10 @@
           "targetAlias": "net5.0",
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
               "target": "Package",
               "version": "[5.0.7, )"
             },
@@ -152,11 +178,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Layer_Project\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Layer_Project\\Domain\\Domain.csproj"
+              "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Layer_Project\\Domain\\Project.Domain.csproj": {
+                "projectPath": "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Layer_Project\\Domain\\Project.Domain.csproj"
               },
-              "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Layer_Project\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Layer_Project\\Infrastructure\\Infrastructure.csproj"
+              "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Layer_Project\\Infrastructure\\Project.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Layer_Project\\Infrastructure\\Project.Infrastructure.csproj"
               }
             }
           }
@@ -170,6 +196,18 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.7, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
