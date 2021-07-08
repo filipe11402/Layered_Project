@@ -403,14 +403,18 @@
           "lib/netcoreapp2.1/_._": {}
         }
       },
-      "Domain/1.0.0": {
+      "Project.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "5.0.7",
+          "Microsoft.EntityFrameworkCore.Sqlite": "5.0.7"
+        },
         "compile": {
-          "bin/placeholder/Domain.dll": {}
+          "bin/placeholder/Project.Domain.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Domain.dll": {}
+          "bin/placeholder/Project.Domain.dll": {}
         }
       }
     }
@@ -1111,34 +1115,34 @@
         "version.txt"
       ]
     },
-    "Domain/1.0.0": {
+    "Project.Domain/1.0.0": {
       "type": "project",
-      "path": "../Domain/Domain.csproj",
-      "msbuildProject": "../Domain/Domain.csproj"
+      "path": "../Domain/Project.Domain.csproj",
+      "msbuildProject": "../Domain/Project.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
-      "Domain >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 5.0.7",
       "Microsoft.EntityFrameworkCore.Sqlite >= 5.0.7",
-      "Microsoft.EntityFrameworkCore.Tools >= 5.0.7"
+      "Microsoft.EntityFrameworkCore.Tools >= 5.0.7",
+      "Project.Domain >= 1.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Filipe Encarnacao\\.nuget\\packages\\": {}
+    "C:\\Users\\Dominique\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Layer_Project\\Infrastructure\\Infrastructure.csproj",
-      "projectName": "Infrastructure",
-      "projectPath": "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Layer_Project\\Infrastructure\\Infrastructure.csproj",
-      "packagesPath": "C:\\Users\\Filipe Encarnacao\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Layer_Project\\Infrastructure\\obj\\",
+      "projectUniqueName": "C:\\Users\\Dominique\\Desktop\\STUFF\\dev\\C#\\Domain_Layers\\Infrastructure\\Project.Infrastructure.csproj",
+      "projectName": "Project.Infrastructure",
+      "projectPath": "C:\\Users\\Dominique\\Desktop\\STUFF\\dev\\C#\\Domain_Layers\\Infrastructure\\Project.Infrastructure.csproj",
+      "packagesPath": "C:\\Users\\Dominique\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Dominique\\Desktop\\STUFF\\dev\\C#\\Domain_Layers\\Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Filipe Encarnacao\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Dominique\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1152,8 +1156,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Layer_Project\\Domain\\Domain.csproj": {
-              "projectPath": "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Layer_Project\\Domain\\Domain.csproj"
+            "C:\\Users\\Dominique\\Desktop\\STUFF\\dev\\C#\\Domain_Layers\\Domain\\Project.Domain.csproj": {
+              "projectPath": "C:\\Users\\Dominique\\Desktop\\STUFF\\dev\\C#\\Domain_Layers\\Domain\\Project.Domain.csproj"
             }
           }
         }
