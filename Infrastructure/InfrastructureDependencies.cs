@@ -16,7 +16,7 @@ namespace Project.Infrastructure
         {
             services.AddScoped(typeof(IApplicationDbContext), typeof(ApplicationDbContext));
             services.AddDbContext<ApplicationDbContext>(options 
-                => options.UseSqlite(@"Data Source=Domain_Layers\ProductDb"));
+                => options.UseSqlite(@"Data Source=C:\Users\Filipe Encarnacao\Desktop\C#\Layer_Project\ProductDb"));
         }
     }
 }
