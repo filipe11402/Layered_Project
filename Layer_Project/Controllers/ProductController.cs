@@ -1,6 +1,8 @@
-﻿using Domain.Entities;
+﻿using Application.ViewModels;
+using Domain.Entities;
 using Infrastructure.Context;
 using Microsoft.AspNetCore.Mvc;
+using Project.Domain.Interfaces;
 using Project.Domain.Repositories;
 using Project.Infrastructure.Repositories;
 using System;
@@ -12,18 +14,20 @@ namespace Application.Controllers
 {
     public class ProductController : Controller
     {
-        private IProductRepository _productRepository;
-        private readonly ApplicationDbContext _productDb;
+        private IUnitOfWork _unitOfWork;
 
-        public ProductController()
+        public ProductController(IUnitOfWork unitOfWork)
         {
-            _productRepository = new ProductRepository(_productDb);
+            _unitOfWork = unitOfWork;
         }
 
         public IActionResult Index()
         {
-            IEnumerable<Product> productList = _productRepository.GetProducts();
-            return View(productList);
+            ProductViewModel products = new ProductViewModel();
+
+            products.productList = _unitOfWork.products.GetProducts();
+
+            return View(products);
         }
     }
 }

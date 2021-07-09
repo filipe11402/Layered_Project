@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Domain.Interfaces
 {
-    public interface IRepository<TEntity>
+    public interface IRepository<T> where T : class
     {
-        public IEnumerable<TEntity> GetProducts();
+        public IEnumerable<T> GetProducts();
     }
 }

@@ -8,6 +8,6 @@ namespace Application.ViewModels
 {
     public class ProductViewModel
     {
-        public IEnumerable<Product> Producs;
+        public IEnumerable<Product> productList;
     }
 }
