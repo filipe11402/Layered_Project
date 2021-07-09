@@ -1094,19 +1094,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Filipe Encarnacao\\.nuget\\packages\\": {}
+    "C:\\Users\\Dominique\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Layer_Project\\Infrastructure\\Project.Infrastructure.csproj",
+      "projectUniqueName": "C:\\Users\\Dominique\\Desktop\\STUFF\\dev\\C#\\Domain_Layers\\Infrastructure\\Project.Infrastructure.csproj",
       "projectName": "Project.Infrastructure",
-      "projectPath": "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Layer_Project\\Infrastructure\\Project.Infrastructure.csproj",
-      "packagesPath": "C:\\Users\\Filipe Encarnacao\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Layer_Project\\Infrastructure\\obj\\",
+      "projectPath": "C:\\Users\\Dominique\\Desktop\\STUFF\\dev\\C#\\Domain_Layers\\Infrastructure\\Project.Infrastructure.csproj",
+      "packagesPath": "C:\\Users\\Dominique\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Dominique\\Desktop\\STUFF\\dev\\C#\\Domain_Layers\\Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Filipe Encarnacao\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Dominique\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1120,8 +1120,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Layer_Project\\Domain\\Project.Domain.csproj": {
-              "projectPath": "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Layer_Project\\Domain\\Project.Domain.csproj"
+            "C:\\Users\\Dominique\\Desktop\\STUFF\\dev\\C#\\Domain_Layers\\Domain\\Project.Domain.csproj": {
+              "projectPath": "C:\\Users\\Dominique\\Desktop\\STUFF\\dev\\C#\\Domain_Layers\\Domain\\Project.Domain.csproj"
             }
           }
         }
@@ -1169,5 +1169,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\Dominique\\Desktop\\STUFF\\dev\\C#\\Domain_Layers\\Infrastructure\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
