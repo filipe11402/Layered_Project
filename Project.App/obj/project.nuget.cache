@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< HEAD
+  "dgSpecHash": "GfKsUU5XFh+ASgcUVPK0hbcaIUqJwfMnXwGAMl69v5h3Q789McohJz5EnVEfCb6Z8ktLbb8Qba1/N7SREA5+nA==",
+=======
   "dgSpecHash": "9KrSJmIX4PBzS30s7gWjlzKDvCeh4tAGOug8drPGUqAZHEwJqIqyVYW4n/cIvtUTAKahw014k/5/WjhpeoT5/g==",
+>>>>>>> 23850cb9bda71c9de35f15858e3ae33c74910e59
   "success": true,
   "projectFilePath": "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Layer_Project\\Project.App\\Project.App.csproj",
   "expectedPackageFiles": [

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "BhGVe4TAQUex8cDkMmmyH9I9aY/DxEdlnCixnauwo451Q0HS9Av7HuYBnTOKpKbl7u0NGo9IyQSo+RCXNqzF3w==",
+  "dgSpecHash": "maFAA7KR2u0g5QKiPF4iASrcUhNV2e9v2zAqGt9P1W7kAbcUvjJra90iBwmmg48Wnf6KY9yuRK0Re6lCZig7kw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Layer_Project\\Domain\\Project.Domain.csproj",
   "expectedPackageFiles": [
@@ -35,12 +35,5 @@
     "C:\\Users\\Filipe Encarnacao\\.nuget\\packages\\system.diagnostics.diagnosticsource\\5.0.1\\system.diagnostics.diagnosticsource.5.0.1.nupkg.sha512",
     "C:\\Users\\Filipe Encarnacao\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problema ao ler o arquivo de cache C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Layer_Project\\Domain\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }
