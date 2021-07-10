@@ -7,21 +7,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace Project.Infrastructure.Repositories
 {
     class UnitOfWork : IUnitOfWork
     {
         private readonly ApplicationDbContext _productDb;
-        public UnitOfWork(ApplicationDbContext productDb)
+        public IProductRepository Products { get; }
+        public UnitOfWork(ApplicationDbContext productDb, IProductRepository products)
         {
             _productDb = productDb;
+            Products = products;
         }
 
-        public IProductRepository products { get; }
-
-        public Task<int> CommitAsync()
+        
+        public Task<int> Commit()
         {
-            return _productDb.SaveChangesAsync();
+            return Task.FromResult(_productDb.SaveChanges());
         }
     }
 }

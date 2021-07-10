@@ -8,6 +8,7 @@ namespace Domain.Interfaces
 {
     public interface IRepository<T> where T : class
     {
-        public IEnumerable<T> GetProducts();
+        public IEnumerable<T> GetAll();
+        public T Add(T newT);
     }
 }

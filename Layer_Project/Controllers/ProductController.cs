@@ -1,6 +1,8 @@
-﻿using Application.ViewModels;
+﻿using Application.Queries;
+using Application.ViewModels;
 using Domain.Entities;
 using Infrastructure.Context;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Project.Domain.Interfaces;
 using Project.Domain.Repositories;
@@ -14,20 +16,27 @@ namespace Application.Controllers
 {
     public class ProductController : Controller
     {
-        private IUnitOfWork _unitOfWork;
+        private readonly IUnitOfWork _unitOfWork;
+        private readonly IMediator _mediator;
 
-        public ProductController(IUnitOfWork unitOfWork)
+        public ProductController(IUnitOfWork unitOfWork, IMediator mediator)
         {
             _unitOfWork = unitOfWork;
+            _mediator = mediator;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            ProductViewModel products = new ProductViewModel();
+            ProductViewModel products = new();
 
-            products.productList = _unitOfWork.products.GetProducts();
+            products.productList = await _mediator.Send(new GetProductListQuery());
 
             return View(products);
+        }
+
+        public IActionResult Create() 
+        {
+            return View();
         }
     }
 }

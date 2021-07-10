@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Layer_Project\\Infrastructure\\Project.Infrastructure.csproj": {}
+    "C:\\Users\\Dominique\\Desktop\\STUFF\\dev\\C#\\Domain_Layers\\Infrastructure\\Project.Infrastructure.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Layer_Project\\Domain\\Project.Domain.csproj": {
+    "C:\\Users\\Dominique\\Desktop\\STUFF\\dev\\C#\\Domain_Layers\\Domain\\Project.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Layer_Project\\Domain\\Project.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Dominique\\Desktop\\STUFF\\dev\\C#\\Domain_Layers\\Domain\\Project.Domain.csproj",
         "projectName": "Project.Domain",
-        "projectPath": "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Layer_Project\\Domain\\Project.Domain.csproj",
-        "packagesPath": "C:\\Users\\Filipe Encarnacao\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Layer_Project\\Domain\\obj\\",
+        "projectPath": "C:\\Users\\Dominique\\Desktop\\STUFF\\dev\\C#\\Domain_Layers\\Domain\\Project.Domain.csproj",
+        "packagesPath": "C:\\Users\\Dominique\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Dominique\\Desktop\\STUFF\\dev\\C#\\Domain_Layers\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Filipe Encarnacao\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Dominique\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -40,6 +40,10 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[5.0.7, )"
@@ -74,17 +78,17 @@
         }
       }
     },
-    "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Layer_Project\\Infrastructure\\Project.Infrastructure.csproj": {
+    "C:\\Users\\Dominique\\Desktop\\STUFF\\dev\\C#\\Domain_Layers\\Infrastructure\\Project.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Layer_Project\\Infrastructure\\Project.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\Dominique\\Desktop\\STUFF\\dev\\C#\\Domain_Layers\\Infrastructure\\Project.Infrastructure.csproj",
         "projectName": "Project.Infrastructure",
-        "projectPath": "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Layer_Project\\Infrastructure\\Project.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\Filipe Encarnacao\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Layer_Project\\Infrastructure\\obj\\",
+        "projectPath": "C:\\Users\\Dominique\\Desktop\\STUFF\\dev\\C#\\Domain_Layers\\Infrastructure\\Project.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\Dominique\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Dominique\\Desktop\\STUFF\\dev\\C#\\Domain_Layers\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Filipe Encarnacao\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Dominique\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -98,8 +102,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Layer_Project\\Domain\\Project.Domain.csproj": {
-                "projectPath": "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Layer_Project\\Domain\\Project.Domain.csproj"
+              "C:\\Users\\Dominique\\Desktop\\STUFF\\dev\\C#\\Domain_Layers\\Domain\\Project.Domain.csproj": {
+                "projectPath": "C:\\Users\\Dominique\\Desktop\\STUFF\\dev\\C#\\Domain_Layers\\Domain\\Project.Domain.csproj"
               }
             }
           }

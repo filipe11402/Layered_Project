@@ -9,7 +9,7 @@ namespace Project.Domain.Interfaces
 {
     public interface IUnitOfWork
     {
-        IProductRepository products { get; }
-        Task<int> CommitAsync();
+        IProductRepository Products { get; }
+        Task<int> Commit();
     }
 }

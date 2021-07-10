@@ -19,10 +19,15 @@ namespace Project.Infrastructure.Repositories
             _productDb = productDb;
         }
 
-        public IEnumerable<Product> GetProducts()
+        public IEnumerable<Product> GetAll()
         {
             IEnumerable<Product> productList = _productDb.Products;
             return productList;
+        }
+
+        public Product Add(Product newProduct)
+        {
+            return newProduct;
         }
     }
 }
