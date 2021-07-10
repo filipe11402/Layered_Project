@@ -1,5 +1,5 @@
 ﻿using Application.Queries.Interfaces;
-using Domain.Entities;
+using Application.ViewModels;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Application.Queries
 {
-    public class GetProductListQuery : IGetProductListQuery, IRequest<IEnumerable<Product>>
+    public class GetProductListQuery : IGetProductListQuery, IRequest<IEnumerable<ProductViewModel>>
     {
     }
 }

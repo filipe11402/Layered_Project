@@ -1,5 +1,6 @@
 ﻿using Application.Queries;
 using Application.ViewModels;
+using AutoMapper;
 using Domain.Entities;
 using Infrastructure.Context;
 using MediatR;
@@ -19,7 +20,8 @@ namespace Application.Controllers
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMediator _mediator;
 
-        public ProductController(IUnitOfWork unitOfWork, IMediator mediator)
+
+        public ProductController(IUnitOfWork unitOfWork, IMediator mediator, IMapper mapper)
         {
             _unitOfWork = unitOfWork;
             _mediator = mediator;
@@ -27,9 +29,8 @@ namespace Application.Controllers
 
         public async Task<IActionResult> Index()
         {
-            ProductViewModel products = new();
 
-            products.productList = await _mediator.Send(new GetProductListQuery());
+            IEnumerable<ProductViewModel> products = await _mediator.Send(new GetProductListQuery());
 
             return View(products);
         }
