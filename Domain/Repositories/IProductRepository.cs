@@ -9,6 +9,8 @@ namespace Project.Domain.Repositories
 {
     public interface IProductRepository
     {
-        IEnumerable<Product> GetProducts();
+        IEnumerable<Product> GetAll();
+
+        Product Add(Product newProduct);
     }
 }
