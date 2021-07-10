@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Layer_Project\\Layer_Project\\Application.csproj": {}
+    "C:\\Users\\Dominique\\Desktop\\STUFF\\dev\\C#\\Domain_Layers\\Layer_Project\\Application.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Layer_Project\\Domain\\Domain.csproj": {
+    "C:\\Users\\Dominique\\Desktop\\STUFF\\dev\\C#\\Domain_Layers\\Domain\\Project.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Layer_Project\\Domain\\Domain.csproj",
-        "projectName": "Domain",
-        "projectPath": "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Layer_Project\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\Filipe Encarnacao\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Layer_Project\\Domain\\obj\\",
+        "projectUniqueName": "C:\\Users\\Dominique\\Desktop\\STUFF\\dev\\C#\\Domain_Layers\\Domain\\Project.Domain.csproj",
+        "projectName": "Project.Domain",
+        "projectPath": "C:\\Users\\Dominique\\Desktop\\STUFF\\dev\\C#\\Domain_Layers\\Domain\\Project.Domain.csproj",
+        "packagesPath": "C:\\Users\\Dominique\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Dominique\\Desktop\\STUFF\\dev\\C#\\Domain_Layers\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Filipe Encarnacao\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Dominique\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -39,66 +39,16 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Layer_Project\\Infrastructure\\Infrastructure.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Layer_Project\\Infrastructure\\Infrastructure.csproj",
-        "projectName": "Infrastructure",
-        "projectPath": "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Layer_Project\\Infrastructure\\Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\Filipe Encarnacao\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Layer_Project\\Infrastructure\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\Filipe Encarnacao\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net5.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net5.0": {
-            "targetAlias": "net5.0",
-            "projectReferences": {
-              "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Layer_Project\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Layer_Project\\Domain\\Domain.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
           "dependencies": {
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
               "target": "Package",
               "version": "[5.0.7, )"
             },
@@ -128,17 +78,17 @@
         }
       }
     },
-    "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Layer_Project\\Layer_Project\\Application.csproj": {
+    "C:\\Users\\Dominique\\Desktop\\STUFF\\dev\\C#\\Domain_Layers\\Infrastructure\\Project.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Layer_Project\\Layer_Project\\Application.csproj",
-        "projectName": "Application",
-        "projectPath": "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Layer_Project\\Layer_Project\\Application.csproj",
-        "packagesPath": "C:\\Users\\Filipe Encarnacao\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Layer_Project\\Layer_Project\\obj\\",
+        "projectUniqueName": "C:\\Users\\Dominique\\Desktop\\STUFF\\dev\\C#\\Domain_Layers\\Infrastructure\\Project.Infrastructure.csproj",
+        "projectName": "Project.Infrastructure",
+        "projectPath": "C:\\Users\\Dominique\\Desktop\\STUFF\\dev\\C#\\Domain_Layers\\Infrastructure\\Project.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\Dominique\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Dominique\\Desktop\\STUFF\\dev\\C#\\Domain_Layers\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Filipe Encarnacao\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Dominique\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -152,11 +102,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Layer_Project\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Layer_Project\\Domain\\Domain.csproj"
-              },
-              "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Layer_Project\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Layer_Project\\Infrastructure\\Infrastructure.csproj"
+              "C:\\Users\\Dominique\\Desktop\\STUFF\\dev\\C#\\Domain_Layers\\Domain\\Project.Domain.csproj": {
+                "projectPath": "C:\\Users\\Dominique\\Desktop\\STUFF\\dev\\C#\\Domain_Layers\\Domain\\Project.Domain.csproj"
               }
             }
           }
@@ -170,6 +117,99 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[5.0.7, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Dominique\\Desktop\\STUFF\\dev\\C#\\Domain_Layers\\Layer_Project\\Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Dominique\\Desktop\\STUFF\\dev\\C#\\Domain_Layers\\Layer_Project\\Application.csproj",
+        "projectName": "Application",
+        "projectPath": "C:\\Users\\Dominique\\Desktop\\STUFF\\dev\\C#\\Domain_Layers\\Layer_Project\\Application.csproj",
+        "packagesPath": "C:\\Users\\Dominique\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Dominique\\Desktop\\STUFF\\dev\\C#\\Domain_Layers\\Layer_Project\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Dominique\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\Dominique\\Desktop\\STUFF\\dev\\C#\\Domain_Layers\\Domain\\Project.Domain.csproj": {
+                "projectPath": "C:\\Users\\Dominique\\Desktop\\STUFF\\dev\\C#\\Domain_Layers\\Domain\\Project.Domain.csproj"
+              },
+              "C:\\Users\\Dominique\\Desktop\\STUFF\\dev\\C#\\Domain_Layers\\Infrastructure\\Project.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\Dominique\\Desktop\\STUFF\\dev\\C#\\Domain_Layers\\Infrastructure\\Project.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.7, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

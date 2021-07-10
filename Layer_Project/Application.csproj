@@ -18,8 +18,11 @@
     <ProjectReference Include="..\Infrastructure\Project.Infrastructure.csproj" />
   </ItemGroup>
 
+<<<<<<< HEAD
   <ItemGroup>
     <Folder Include="Handlers\" />
   </ItemGroup>
 
+=======
+>>>>>>> feature/repository-pattern
 </Project>
