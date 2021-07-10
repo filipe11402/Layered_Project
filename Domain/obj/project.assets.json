@@ -1116,11 +1116,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Layer_Project\\Domain\\Project.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Domain_Layers\\Domain\\Project.Domain.csproj",
       "projectName": "Project.Domain",
-      "projectPath": "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Layer_Project\\Domain\\Project.Domain.csproj",
+      "projectPath": "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Domain_Layers\\Domain\\Project.Domain.csproj",
       "packagesPath": "C:\\Users\\Filipe Encarnacao\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Layer_Project\\Domain\\obj\\",
+      "outputPath": "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Domain_Layers\\Domain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Filipe Encarnacao\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1188,13 +1188,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problema ao ler o arquivo de cache C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Layer_Project\\Domain\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  }
 }

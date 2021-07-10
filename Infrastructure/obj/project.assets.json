@@ -1135,11 +1135,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Layer_Project\\Infrastructure\\Project.Infrastructure.csproj",
+      "projectUniqueName": "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Domain_Layers\\Infrastructure\\Project.Infrastructure.csproj",
       "projectName": "Project.Infrastructure",
-      "projectPath": "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Layer_Project\\Infrastructure\\Project.Infrastructure.csproj",
+      "projectPath": "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Domain_Layers\\Infrastructure\\Project.Infrastructure.csproj",
       "packagesPath": "C:\\Users\\Filipe Encarnacao\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Layer_Project\\Infrastructure\\obj\\",
+      "outputPath": "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Domain_Layers\\Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Filipe Encarnacao\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1156,8 +1156,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Layer_Project\\Domain\\Project.Domain.csproj": {
-              "projectPath": "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Layer_Project\\Domain\\Project.Domain.csproj"
+            "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Domain_Layers\\Domain\\Project.Domain.csproj": {
+              "projectPath": "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Domain_Layers\\Domain\\Project.Domain.csproj"
             }
           }
         }

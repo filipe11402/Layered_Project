@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Layer_Project\\Domain\\Project.Domain.csproj": {}
+    "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Domain_Layers\\Domain\\Project.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Layer_Project\\Domain\\Project.Domain.csproj": {
+    "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Domain_Layers\\Domain\\Project.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Layer_Project\\Domain\\Project.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Domain_Layers\\Domain\\Project.Domain.csproj",
         "projectName": "Project.Domain",
-        "projectPath": "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Layer_Project\\Domain\\Project.Domain.csproj",
+        "projectPath": "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Domain_Layers\\Domain\\Project.Domain.csproj",
         "packagesPath": "C:\\Users\\Filipe Encarnacao\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Layer_Project\\Domain\\obj\\",
+        "outputPath": "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Domain_Layers\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Filipe Encarnacao\\AppData\\Roaming\\NuGet\\NuGet.Config",
