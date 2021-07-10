@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "p8/OYT+BFBO1sQHMw8GlUD9nbJYGtJ1+xzPexo7n9Apt/wD/z5q3BL0Hky/uD9RMEHX0taTPtDBTNT7MNYIIuw==",
+  "dgSpecHash": "A4BKbJOq6Tr6GM8VG62xzKvruBWvCYDp4A8Zc5ahyMA4TnwKVSLvCP3HyQdZiC/huercTpIJ4Bl1XOQuB3PSJA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Domain_Layers\\Infrastructure\\Project.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Filipe Encarnacao\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\Filipe Encarnacao\\.nuget\\packages\\mediatr\\9.0.0\\mediatr.9.0.0.nupkg.sha512",
+    "C:\\Users\\Filipe Encarnacao\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\9.0.0\\mediatr.extensions.microsoft.dependencyinjection.9.0.0.nupkg.sha512",
     "C:\\Users\\Filipe Encarnacao\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\Filipe Encarnacao\\.nuget\\packages\\microsoft.data.sqlite.core\\5.0.7\\microsoft.data.sqlite.core.5.0.7.nupkg.sha512",
     "C:\\Users\\Filipe Encarnacao\\.nuget\\packages\\microsoft.dotnet.platformabstractions\\3.1.6\\microsoft.dotnet.platformabstractions.3.1.6.nupkg.sha512",
@@ -15,7 +17,6 @@
     "C:\\Users\\Filipe Encarnacao\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\5.0.7\\microsoft.entityframeworkcore.relational.5.0.7.nupkg.sha512",
     "C:\\Users\\Filipe Encarnacao\\.nuget\\packages\\microsoft.entityframeworkcore.sqlite\\5.0.7\\microsoft.entityframeworkcore.sqlite.5.0.7.nupkg.sha512",
     "C:\\Users\\Filipe Encarnacao\\.nuget\\packages\\microsoft.entityframeworkcore.sqlite.core\\5.0.7\\microsoft.entityframeworkcore.sqlite.core.5.0.7.nupkg.sha512",
-    "C:\\Users\\Filipe Encarnacao\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\5.0.7\\microsoft.entityframeworkcore.tools.5.0.7.nupkg.sha512",
     "C:\\Users\\Filipe Encarnacao\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\5.0.0\\microsoft.extensions.caching.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\Filipe Encarnacao\\.nuget\\packages\\microsoft.extensions.caching.memory\\5.0.0\\microsoft.extensions.caching.memory.5.0.0.nupkg.sha512",
     "C:\\Users\\Filipe Encarnacao\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\5.0.0\\microsoft.extensions.configuration.abstractions.5.0.0.nupkg.sha512",

@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "Q3zW+GmuKMHsOKFxMJPbmBgT4y1BSj8IczRI2o+V1N6Zs4wJhR4MiyGbbSxJdQKpzUOrjQ/stU8YgTJfhhID/A==",
+  "dgSpecHash": "dGmvDxVd8KMKjCz0cVBb/SCd9q9WleZtnlIULS1ZBVnjUPKpBxq43AznPaQ0Dorrs1tFTcDr1PF8J5GWLDfEIA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Domain_Layers\\Domain\\Project.Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Filipe Encarnacao\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\Filipe Encarnacao\\.nuget\\packages\\mediatr\\9.0.0\\mediatr.9.0.0.nupkg.sha512",
+    "C:\\Users\\Filipe Encarnacao\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\9.0.0\\mediatr.extensions.microsoft.dependencyinjection.9.0.0.nupkg.sha512",
     "C:\\Users\\Filipe Encarnacao\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\Filipe Encarnacao\\.nuget\\packages\\microsoft.data.sqlite.core\\5.0.7\\microsoft.data.sqlite.core.5.0.7.nupkg.sha512",
     "C:\\Users\\Filipe Encarnacao\\.nuget\\packages\\microsoft.dotnet.platformabstractions\\3.1.6\\microsoft.dotnet.platformabstractions.3.1.6.nupkg.sha512",
@@ -35,5 +37,12 @@
     "C:\\Users\\Filipe Encarnacao\\.nuget\\packages\\system.diagnostics.diagnosticsource\\5.0.1\\system.diagnostics.diagnosticsource.5.0.1.nupkg.sha512",
     "C:\\Users\\Filipe Encarnacao\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problema ao ler o arquivo de cache C:\\Users\\Filipe Encarnacao\\Desktop\\C#\\Domain_Layers\\Domain\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
