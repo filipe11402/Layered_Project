@@ -1,4 +1,5 @@
 ﻿using Domain.Entities;
+using Domain.Interfaces;
 using Infrastructure.Context;
 using Project.Domain.Repositories;
 using System;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Project.Infrastructure.Repositories
 {
-    public class ProductRepository : IProductRepository
+    public class ProductRepository : IProductRepository, IRepository<Product>
     {
         private readonly ApplicationDbContext _productDb;
 
