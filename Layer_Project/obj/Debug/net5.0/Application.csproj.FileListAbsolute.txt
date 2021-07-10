@@ -146,3 +146,5 @@ C:\Users\Dominique\Desktop\STUFF\dev\C#\Domain_Layers\Layer_Project\obj\Debug\ne
 C:\Users\Dominique\Desktop\STUFF\dev\C#\Domain_Layers\Layer_Project\bin\Debug\net5.0\MediatR.dll
 C:\Users\Dominique\Desktop\STUFF\dev\C#\Domain_Layers\Layer_Project\bin\Debug\net5.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\Dominique\Desktop\STUFF\dev\C#\Domain_Layers\Layer_Project\obj\Debug\net5.0\Razor\Views\Product\Create.cshtml.g.cs
+C:\Users\Dominique\Desktop\STUFF\dev\C#\Domain_Layers\Layer_Project\bin\Debug\net5.0\AutoMapper.dll
+C:\Users\Dominique\Desktop\STUFF\dev\C#\Domain_Layers\Layer_Project\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
