@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Project.Domain.Commands;
 using Project.Infrastructure;
 using System;
 using System.Collections.Generic;
@@ -39,11 +40,12 @@ namespace Layer_Project
             var configuration = new MapperConfiguration(cfg =>
             {
                 cfg.CreateMap<Product, ProductViewModel>();
+                cfg.CreateMap<ProductViewModel, CreateProductCommand>();
             });
 
             IMapper mapper = configuration.CreateMapper();
             services.AddSingleton(mapper);
-            services.AddMediatR(Assembly.GetExecutingAssembly());
+            services.AddMediatR(typeof(ProductViewModel).Assembly, typeof(CreateProductCommand).Assembly);
 
         }
 

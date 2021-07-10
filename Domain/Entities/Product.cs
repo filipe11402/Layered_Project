@@ -22,5 +22,13 @@ namespace Domain.Entities
             this.ProductName = productName;
             this.ProductPrice = productPrice;
         }
+
+        public void ApplyDiscounts(int discountValue) 
+        {
+            if (discountValue >= this.ProductPrice) 
+            {
+                this.ProductPrice -= discountValue;
+            }
+        }
     }
 }

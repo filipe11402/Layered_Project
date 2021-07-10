@@ -5,6 +5,7 @@ using Domain.Entities;
 using Infrastructure.Context;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using Project.Domain.Commands;
 using Project.Domain.Interfaces;
 using Project.Domain.Repositories;
 using Project.Infrastructure.Repositories;
@@ -19,12 +20,13 @@ namespace Application.Controllers
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMediator _mediator;
-
+        private readonly IMapper _mapper;
 
         public ProductController(IUnitOfWork unitOfWork, IMediator mediator, IMapper mapper)
         {
             _unitOfWork = unitOfWork;
             _mediator = mediator;
+            _mapper = mapper;
         }
 
         public async Task<IActionResult> Index()
@@ -35,9 +37,23 @@ namespace Application.Controllers
             return View(products);
         }
 
-        public IActionResult Create() 
+        public IActionResult Create()
         {
             return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> PostCreate(ProductViewModel newProduct) 
+        {
+            CreateProductCommand productCommand = _mapper.Map<ProductViewModel, CreateProductCommand>(newProduct);
+
+            Product handledProduct = await _mediator.Send(productCommand);
+
+            _unitOfWork.Products.Add(handledProduct);
+
+            await _unitOfWork.Commit();
+
+            return RedirectToAction("Index");
         }
     }
 }
