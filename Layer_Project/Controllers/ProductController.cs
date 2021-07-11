@@ -55,5 +55,12 @@ namespace Application.Controllers
 
             return RedirectToAction("Index");
         }
+
+        [HttpPost]
+        public async Task<IActionResult> PostBuy(IEnumerable<ProductViewModel> productsToBuy) 
+        {
+
+            return RedirectToAction("Index");
+        }
     }
 }

@@ -16,12 +16,12 @@ namespace Project.Domain.Entities
 
         public Order()
         {
-            ProductList = new List<Product>();
+
         }
 
-        protected Order AddProducts(IEnumerable<Product> productListToAdd) 
+        public Order AddProducts(IEnumerable<Product> productListToAdd) 
         {
-            ProductList.Concat(productListToAdd);
+            this.ProductList = ProductList.Concat(productListToAdd);
 
             return this;
         }
