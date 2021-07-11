@@ -23,6 +23,7 @@ namespace Project.Infrastructure.Repositories
         
         public Task<int> Commit()
         {
+            _productDb.SaveChanges();
             return Task.FromResult(_productDb.SaveChanges());
         }
     }

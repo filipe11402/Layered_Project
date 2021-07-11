@@ -1,3 +1,8 @@
+using Application.Queries;
+using Application.Queries.Interfaces;
+using Application.ViewModels;
+using AutoMapper;
+using Domain.Entities;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -5,6 +10,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Project.Domain.Commands;
 using Project.Infrastructure;
 using System;
 using System.Collections.Generic;
@@ -29,7 +35,18 @@ namespace Layer_Project
             services.AddInfrastructure();
             services.InfrastructureServices();
             services.AddControllersWithViews();
-            services.AddMediatR(Assembly.GetExecutingAssembly());
+            services.AddScoped<IGetProductListQuery, GetProductListQuery>();
+
+            var configuration = new MapperConfiguration(cfg =>
+            {
+                cfg.CreateMap<Product, ProductViewModel>();
+                cfg.CreateMap<ProductViewModel, CreateProductCommand>();
+            });
+
+            IMapper mapper = configuration.CreateMapper();
+            services.AddSingleton(mapper);
+            services.AddMediatR(typeof(ProductViewModel).Assembly, typeof(CreateProductCommand).Assembly);
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

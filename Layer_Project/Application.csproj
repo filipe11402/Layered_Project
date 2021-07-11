@@ -5,6 +5,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Handlers\**" />
+    <Content Remove="Handlers\**" />
+    <EmbeddedResource Remove="Handlers\**" />
+    <None Remove="Handlers\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.7" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.7">
@@ -18,11 +26,4 @@
     <ProjectReference Include="..\Infrastructure\Project.Infrastructure.csproj" />
   </ItemGroup>
 
-<<<<<<< HEAD
-  <ItemGroup>
-    <Folder Include="Handlers\" />
-  </ItemGroup>
-
-=======
->>>>>>> feature/repository-pattern
 </Project>

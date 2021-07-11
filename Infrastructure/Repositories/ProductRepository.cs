@@ -27,6 +27,11 @@ namespace Project.Infrastructure.Repositories
 
         public Product Add(Product newProduct)
         {
+            if (newProduct == null) 
+            {
+                
+            }
+            _productDb.Add(newProduct);
             return newProduct;
         }
     }
