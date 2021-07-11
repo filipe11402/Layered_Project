@@ -15,10 +15,11 @@ namespace Project.Infrastructure.Repositories
         private readonly ApplicationDbContext _productDb;
         public IProductRepository Products { get; }
         public IOrderRepository Orders { get; }
-        public UnitOfWork(ApplicationDbContext productDb, IProductRepository products)
+        public UnitOfWork(ApplicationDbContext productDb, IProductRepository products, IOrderRepository orders)
         {
             _productDb = productDb;
             Products = products;
+            Orders = orders;
         }
 
         

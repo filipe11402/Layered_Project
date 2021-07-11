@@ -1,4 +1,5 @@
 ﻿using Application.ViewModels;
+using Domain.Entities;
 using MediatR;
 using Project.Domain.Entities;
 using System;
@@ -10,6 +11,11 @@ namespace Application.Commands
 {
     public class CreateOrderCommand : IRequest<Order>
     {
-        public IEnumerable<ProductViewModel> ProductsToBuy { get; }
+        public IEnumerable<Product> ProductsToBuy { get; set; }
+
+        public CreateOrderCommand(IEnumerable<Product> productsToBuy)
+        {
+            ProductsToBuy = productsToBuy;
+        }
     }
 }

@@ -2,7 +2,7 @@
 
 namespace Project.Infrastructure.Migrations
 {
-    public partial class NewEntity : Migration
+    public partial class FixingOrder : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

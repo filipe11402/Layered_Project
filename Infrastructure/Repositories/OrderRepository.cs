@@ -21,11 +21,7 @@ namespace Project.Infrastructure.Repositories
 
         public Order Add(Order newOrder)
         {
-            if (newOrder == null) 
-            {
-                throw new NullReferenceException();
-            }
-
+            _OrderDb.Add(newOrder);
             return newOrder;
         }
 

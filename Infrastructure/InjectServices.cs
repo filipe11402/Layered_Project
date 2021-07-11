@@ -17,6 +17,7 @@ namespace Project.Infrastructure
         {
             services.AddScoped<IProductRepository, ProductRepository>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddScoped<IOrderRepository, OrderRepository>();
         }
 
     }
