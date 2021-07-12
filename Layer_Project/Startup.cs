@@ -41,6 +41,7 @@ namespace Layer_Project
             {
                 cfg.CreateMap<Product, ProductViewModel>();
                 cfg.CreateMap<ProductViewModel, CreateProductCommand>();
+                cfg.CreateMap<ProductViewModel, Product>();
             });
 
             IMapper mapper = configuration.CreateMapper();

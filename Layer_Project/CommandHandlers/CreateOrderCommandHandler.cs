@@ -1,4 +1,5 @@
 ﻿using Application.Commands;
+using Domain.Entities;
 using MediatR;
 using Project.Domain.Entities;
 using System;
@@ -12,12 +13,19 @@ namespace Application.CommandHandlers
     public class CreateOrderCommandHandler : IRequestHandler<CreateOrderCommand, Order>
     {
 
-        public Task<Order> Handle(CreateOrderCommand request, CancellationToken cancellationToken)
+
+        public async Task<Order> Handle(CreateOrderCommand request, CancellationToken cancellationToken)
         {
+
             Order newOrder = new();
 
-            //newOrder.AddProducts();
-            return;
+            foreach (var product in request.ProductsToBuy) 
+            {
+                product.ApplyDiscounts(2);
+            }
+
+
+            return await Task.FromResult(newOrder);
         }
     }
 }

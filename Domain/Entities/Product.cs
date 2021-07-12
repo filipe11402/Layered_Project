@@ -17,6 +17,7 @@ namespace Domain.Entities
         [Required]
         public int ProductPrice { get; set; }
 
+
         public Product(string productName, int productPrice)
         {
             this.ProductName = productName;

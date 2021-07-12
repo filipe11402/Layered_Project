@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,8 +13,7 @@ namespace Project.Domain.Entities
     {
         [Key]
         public int OrderId { get; set; }
-        public IEnumerable<Product> ProductList { get; set; }
-
+        public virtual IEnumerable<Product> ProductList { get; private set; }
         public Order()
         {
 
@@ -21,7 +21,7 @@ namespace Project.Domain.Entities
 
         public Order AddProducts(IEnumerable<Product> productListToAdd) 
         {
-            this.ProductList = ProductList.Concat(productListToAdd);
+            this.ProductList = productListToAdd;
 
             return this;
         }
