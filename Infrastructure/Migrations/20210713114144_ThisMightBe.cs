@@ -2,7 +2,7 @@
 
 namespace Project.Infrastructure.Migrations
 {
-    public partial class FixingOrder : Migration
+    public partial class ThisMightBe : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

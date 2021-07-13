@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Project.Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20210711165822_InitialSchema")]
-    partial class InitialSchema
+    [Migration("20210713113140_AnotherFix")]
+    partial class AnotherFix
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -45,6 +45,9 @@ namespace Project.Infrastructure.Migrations
                 {
                     b.Property<int>("OrderId")
                         .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int?>("ProductId")
                         .HasColumnType("INTEGER");
 
                     b.HasKey("OrderId");

@@ -22,7 +22,7 @@ namespace Project.Infrastructure.Repositories
 
         public Order Add(Order newOrder)
         {
-            _orderDb.Add(newOrder);
+            _orderDb.Orders.Add(newOrder);
             return newOrder;
         }
 

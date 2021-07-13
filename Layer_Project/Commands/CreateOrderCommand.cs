@@ -11,9 +11,9 @@ namespace Application.Commands
 {
     public class CreateOrderCommand : IRequest<Order>
     {
-        public IEnumerable<Product> ProductsToBuy { get; set; }
+        public List<Product> ProductsToBuy { get; set; }
 
-        public CreateOrderCommand(IEnumerable<Product> productsToBuy)
+        public CreateOrderCommand(List<Product> productsToBuy)
         {
             ProductsToBuy = productsToBuy;
         }

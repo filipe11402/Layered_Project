@@ -2,7 +2,7 @@
 
 namespace Project.Infrastructure.Migrations
 {
-    public partial class FixedSchema : Migration
+    public partial class NewSchema : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Project.Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20210711155530_FixedSchema")]
-    partial class FixedSchema
+    [Migration("20210713111810_TryingToFix")]
+    partial class TryingToFix
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
