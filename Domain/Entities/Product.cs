@@ -18,10 +18,9 @@ namespace Domain.Entities
         [Required]
         public int ProductPrice { get; set; }
 
-        public virtual ICollection<Order> Orders { get; set; }
 
 
-    public Product(string productName, int productPrice)
+        public Product(string productName, int productPrice)
         {
             this.ProductName = productName;
             this.ProductPrice = productPrice;

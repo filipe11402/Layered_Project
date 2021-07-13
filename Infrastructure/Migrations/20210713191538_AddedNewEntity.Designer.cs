@@ -8,8 +8,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Project.Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20210713165437_NewSchema")]
-    partial class NewSchema
+    [Migration("20210713191538_AddedNewEntity")]
+    partial class AddedNewEntity
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -35,21 +35,6 @@ namespace Project.Infrastructure.Migrations
                     b.ToTable("Products");
                 });
 
-            modelBuilder.Entity("OrderProduct", b =>
-                {
-                    b.Property<int>("OrdersOrderId")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("ProductListProductID")
-                        .HasColumnType("INTEGER");
-
-                    b.HasKey("OrdersOrderId", "ProductListProductID");
-
-                    b.HasIndex("ProductListProductID");
-
-                    b.ToTable("OrderProduct");
-                });
-
             modelBuilder.Entity("Project.Domain.Entities.Order", b =>
                 {
                     b.Property<int>("OrderId")
@@ -61,19 +46,43 @@ namespace Project.Infrastructure.Migrations
                     b.ToTable("Orders");
                 });
 
-            modelBuilder.Entity("OrderProduct", b =>
+            modelBuilder.Entity("Project.Domain.Entities.OrderProduct", b =>
                 {
-                    b.HasOne("Project.Domain.Entities.Order", null)
-                        .WithMany()
-                        .HasForeignKey("OrdersOrderId")
+                    b.Property<int>("OrderId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("OrderId", "ProductId");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("OrderProduct");
+                });
+
+            modelBuilder.Entity("Project.Domain.Entities.OrderProduct", b =>
+                {
+                    b.HasOne("Project.Domain.Entities.Order", "Order")
+                        .WithMany("ProductList")
+                        .HasForeignKey("OrderId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Domain.Entities.Product", null)
+                    b.HasOne("Domain.Entities.Product", "Product")
                         .WithMany()
-                        .HasForeignKey("ProductListProductID")
+                        .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Order");
+
+                    b.Navigation("Product");
+                });
+
+            modelBuilder.Entity("Project.Domain.Entities.Order", b =>
+                {
+                    b.Navigation("ProductList");
                 });
 #pragma warning restore 612, 618
         }

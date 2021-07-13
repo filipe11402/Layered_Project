@@ -59,10 +59,10 @@ namespace Application.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> PostBuy(List<ProductViewModel> productsToBuy) 
+        public async Task<IActionResult> PostBuy(IEnumerable<ProductViewModel> productsToBuy) 
         {
 
-            List<Product> productListToBuy = _mapper.Map<List<ProductViewModel>, List<Product>>(productsToBuy);
+            IEnumerable<Product> productListToBuy = _mapper.Map<IEnumerable<ProductViewModel>, IEnumerable<Product>>(productsToBuy);
 
             Order newOrder = new();
 

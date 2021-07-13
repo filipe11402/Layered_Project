@@ -2,7 +2,7 @@
 
 namespace Project.Infrastructure.Migrations
 {
-    public partial class NewSchema : Migration
+    public partial class AddedNewEntity : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -36,30 +36,30 @@ namespace Project.Infrastructure.Migrations
                 name: "OrderProduct",
                 columns: table => new
                 {
-                    OrdersOrderId = table.Column<int>(type: "INTEGER", nullable: false),
-                    ProductListProductID = table.Column<int>(type: "INTEGER", nullable: false)
+                    OrderId = table.Column<int>(type: "INTEGER", nullable: false),
+                    ProductId = table.Column<int>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_OrderProduct", x => new { x.OrdersOrderId, x.ProductListProductID });
+                    table.PrimaryKey("PK_OrderProduct", x => new { x.OrderId, x.ProductId });
                     table.ForeignKey(
-                        name: "FK_OrderProduct_Orders_OrdersOrderId",
-                        column: x => x.OrdersOrderId,
+                        name: "FK_OrderProduct_Orders_OrderId",
+                        column: x => x.OrderId,
                         principalTable: "Orders",
                         principalColumn: "OrderId",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_OrderProduct_Products_ProductListProductID",
-                        column: x => x.ProductListProductID,
+                        name: "FK_OrderProduct_Products_ProductId",
+                        column: x => x.ProductId,
                         principalTable: "Products",
                         principalColumn: "ProductID",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_OrderProduct_ProductListProductID",
+                name: "IX_OrderProduct_ProductId",
                 table: "OrderProduct",
-                column: "ProductListProductID");
+                column: "ProductId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
