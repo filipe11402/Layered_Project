@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using Project.Domain.Entities;
 
 namespace Domain.Entities
 {
@@ -17,8 +18,10 @@ namespace Domain.Entities
         [Required]
         public int ProductPrice { get; set; }
 
+        public virtual ICollection<Order> Orders { get; set; }
 
-        public Product(string productName, int productPrice)
+
+    public Product(string productName, int productPrice)
         {
             this.ProductName = productName;
             this.ProductPrice = productPrice;

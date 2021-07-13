@@ -13,16 +13,16 @@ namespace Project.Domain.Entities
     {
         [Key]
         public int OrderId { get; set; }
-        public List<Product> ProductList { get; set; }
+        public ICollection<Product> ProductList { get; set; }
         public Order()
         {
-            ProductList = new List<Product>();
+            this.ProductList = new List<Product>();
         }
 
         public Order AddProducts(List<Product> productListToAdd) 
         {
 
-        foreach (var product in productListToAdd) 
+        foreach (var product in productListToAdd)
         {
                 this.ProductList.Add(product);
         }
