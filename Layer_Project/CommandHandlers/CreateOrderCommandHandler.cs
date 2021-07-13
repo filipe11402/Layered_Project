@@ -24,6 +24,7 @@ namespace Application.CommandHandlers
                 product.ApplyDiscounts(2);
             }
 
+            newOrder.AddProducts(request.ProductsToBuy);
 
             return await Task.FromResult(newOrder);
         }

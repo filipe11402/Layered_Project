@@ -21,7 +21,11 @@ namespace Project.Domain.Entities
 
         public Order AddProducts(IEnumerable<Product> productListToAdd) 
         {
-            this.ProductList = productListToAdd;
+
+            foreach (var product in productListToAdd) 
+            {
+                ProductList.ToList().Add(product);
+            }
 
             return this;
         }

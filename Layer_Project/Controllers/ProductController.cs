@@ -69,7 +69,7 @@ namespace Application.Controllers
             newOrder = await _mediator.Send(new CreateOrderCommand(productListToBuy));
 
             newOrder = _unitOfWork.Orders.Add(newOrder);
-            newOrder.AddProducts(productListToBuy);
+            
 
             await _unitOfWork.Commit();
 

@@ -1,4 +1,5 @@
-﻿using Domain.Interfaces;
+﻿using Domain.Entities;
+using Domain.Interfaces;
 using Infrastructure.Context;
 using Project.Domain.Entities;
 using Project.Domain.Repositories;
@@ -12,22 +13,22 @@ namespace Project.Infrastructure.Repositories
 {
     public class OrderRepository : IOrderRepository, IRepository<Order>
     {
-        private readonly ApplicationDbContext _OrderDb;
+        private readonly ApplicationDbContext _orderDb;
 
         public OrderRepository(ApplicationDbContext orderDb)
         {
-            _OrderDb = orderDb;
+            _orderDb = orderDb;
         }
 
         public Order Add(Order newOrder)
         {
-            _OrderDb.Add(newOrder);
+            _orderDb.Add(newOrder);
             return newOrder;
         }
 
         public IEnumerable<Order> GetAll()
         {
-             throw new Exception();
+            return _orderDb.Orders;
         }
     }
 }
