@@ -19,11 +19,12 @@ namespace Application.CommandHandlers
 
             Order newOrder = new();
 
-            foreach (var product in request.ProductsToBuy) 
-            {
-                product.ApplyDiscounts(2);
-            }
+            //foreach (var product in request.ProductsToBuy) 
+            //{
+            //    product.ApplyDiscounts(2);
+            //}
 
+            newOrder.AddProducts(request.ProductsToBuy);
 
             return await Task.FromResult(newOrder);
         }

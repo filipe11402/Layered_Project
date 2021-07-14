@@ -13,15 +13,19 @@ namespace Project.Domain.Entities
     {
         [Key]
         public int OrderId { get; set; }
-        public virtual IEnumerable<Product> ProductList { get; private set; }
+        public ICollection<OrderProduct> ProductList { get; set; }
         public Order()
         {
-
+            this.ProductList = new List<OrderProduct>();
         }
 
         public Order AddProducts(IEnumerable<Product> productListToAdd) 
         {
-            this.ProductList = productListToAdd;
+
+            foreach (var product in productListToAdd) 
+            {
+                //ProductList.Add(new OrderProduct(this, product));
+            }
 
             return this;
         }

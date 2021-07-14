@@ -1,0 +1,25 @@
+﻿@model IEnumerable<Application.ViewModels.OrderViewModel>
+
+@if (Model.Count() > 1) 
+{
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Orders</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var order in Model)
+        {
+        <tr>
+            @foreach (var product in order.ProductList)
+            {
+                <th scope="row">@product.ProductName</th>
+                <th scope="row">@product.ProductPrice</th>
+            }
+        </tr>
+        }
+    </tbody>
+</table>
+}
+
