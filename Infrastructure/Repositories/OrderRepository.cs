@@ -1,6 +1,7 @@
 ﻿using Domain.Entities;
 using Domain.Interfaces;
 using Infrastructure.Context;
+using Microsoft.EntityFrameworkCore;
 using Project.Domain.Entities;
 using Project.Domain.Repositories;
 using System;
@@ -28,7 +29,12 @@ namespace Project.Infrastructure.Repositories
 
         public IEnumerable<Order> GetAll()
         {
-            return _orderDb.Orders;
+            return _orderDb.Orders.Include(x => x.ProductList);
+        }
+
+        public void Update(Order orderToUpdate)
+        {
+            _orderDb.Update(orderToUpdate);
         }
     }
 }

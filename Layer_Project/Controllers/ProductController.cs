@@ -64,11 +64,7 @@ namespace Application.Controllers
 
             IEnumerable<Product> productListToBuy = _mapper.Map<IEnumerable<ProductViewModel>, IEnumerable<Product>>(productsToBuy);
 
-            Order newOrder = new();
-
-            newOrder = await _mediator.Send(new CreateOrderCommand(productListToBuy));
-
-            newOrder = _unitOfWork.Orders.Add(newOrder);
+            await _mediator.Send(new CreateOrderCommand(productListToBuy));
             
 
             await _unitOfWork.Commit();

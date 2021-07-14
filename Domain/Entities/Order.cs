@@ -13,22 +13,21 @@ namespace Project.Domain.Entities
     {
         [Key]
         public int OrderId { get; set; }
-        public ICollection<Product> ProductList { get; set; }
+        public ICollection<OrderProduct> ProductList { get; set; }
         public Order()
         {
-            this.ProductList = new List<Product>();
+            this.ProductList = new List<OrderProduct>();
         }
 
-        public Order AddProducts(IEnumerable<Product> productListToAdd) 
-        {
+        //public OrderProduct AddProducts(Product productToAdd) 
+        //{
+        //    OrderProduct orderRelationship = new OrderProduct() { Order = this, Product = productToAdd };
 
-            foreach (var product in productListToAdd) 
-            {
-                this.ProductList.Add(product);
-            }
+        //    ProductList.Add(orderRelationship);
 
-            return this;
-        }
+        //    return orderRelationship;
+        //}
 
     }
+
 }

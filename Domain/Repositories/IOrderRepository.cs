@@ -12,6 +12,8 @@ namespace Project.Domain.Repositories
     {
         IEnumerable<Order> GetAll();
 
+        void Update(Order orderToUpdate);
+
         Order Add(Order newOrder);
     }
 }

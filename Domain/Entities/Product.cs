@@ -17,7 +17,7 @@ namespace Domain.Entities
         public string ProductName { get; set; }
         [Required]
         public int ProductPrice { get; set; }
-        public ICollection<Order> Orders { get; set; }
+        public ICollection<OrderProduct> Orders { get; set; }
 
 
 

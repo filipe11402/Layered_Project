@@ -19,6 +19,14 @@ namespace Infrastructure.Context
 
         public DbSet<Product> Products { get; set; }
         public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderProduct> OrderProducts { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder builder) 
+        {
+            base.OnModelCreating(builder);
+
+            builder.Entity<OrderProduct>().HasKey(i => new { i.OrderId, i.ProductId });
+        }
 
     }
 }

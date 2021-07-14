@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Application.Commands
 {
-    public class CreateOrderCommand : IRequest<Order>
+    public class CreateOrderCommand : IRequest
     {
         public IEnumerable<Product> ProductsToBuy { get; set; }
 
