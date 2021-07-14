@@ -15,7 +15,7 @@ namespace Project.Infrastructure
         public static void AddInfrastructure(this IServiceCollection services) 
         {
             services.AddDbContext<ApplicationDbContext>(options 
-                => options.UseSqlite(@"Data Source=C:\Users\Filipe Encarnacao\Desktop\C#\Domain_Layers\ProductDb"));
+                => options.UseSqlite(@"Data Source=C:\Users\Dominique\Desktop\STUFF\dev\C#\Domain_Layers\ProductDb"));
         }
     }
 }
