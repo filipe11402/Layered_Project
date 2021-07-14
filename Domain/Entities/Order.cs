@@ -13,10 +13,10 @@ namespace Project.Domain.Entities
     {
         [Key]
         public int OrderId { get; set; }
-        public ICollection<OrderProduct> ProductList { get; set; }
+        public ICollection<Product> ProductList { get; set; }
         public Order()
         {
-            this.ProductList = new List<OrderProduct>();
+            this.ProductList = new List<Product>();
         }
 
         public Order AddProducts(IEnumerable<Product> productListToAdd) 
@@ -24,7 +24,7 @@ namespace Project.Domain.Entities
 
             foreach (var product in productListToAdd) 
             {
-                //ProductList.Add(new OrderProduct(this, product));
+                this.ProductList.Add(product);
             }
 
             return this;
