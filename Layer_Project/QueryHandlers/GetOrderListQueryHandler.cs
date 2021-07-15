@@ -27,7 +27,7 @@ namespace Application.QueryHandlers
         public async Task<IEnumerable<OrderViewModel>> Handle(GetOrderListQuery request, CancellationToken cancellationToken)
         {
             IEnumerable<Order> allOrders =  _unitOfWork.Orders.GetAll();
-            IEnumerable<OrderViewModel> orderList = _mapper.Map<IEnumerable<Order>, IEnumerable< OrderViewModel >> (allOrders);
+            IEnumerable<OrderViewModel> orderList = _mapper.Map<IEnumerable<Order>, IEnumerable<OrderViewModel>> (allOrders);
 
             return await Task.FromResult(orderList);
         }

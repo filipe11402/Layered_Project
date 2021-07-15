@@ -29,7 +29,7 @@ namespace Project.Infrastructure.Repositories
 
         public IEnumerable<Order> GetAll()
         {
-            return _orderDb.Orders.Include(x => x.ProductList);
+            return _orderDb.Orders.Include(order => order.ProductList).ThenInclude(orderProduct => orderProduct.Product);
         }
 
         public void Update(Order orderToUpdate)
