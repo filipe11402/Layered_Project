@@ -23,7 +23,6 @@ namespace Project.Infrastructure.Repositories
             Orders = orders;
         }
 
-        
         public Task<int> Commit()
         {
             _productDb.SaveChanges();
