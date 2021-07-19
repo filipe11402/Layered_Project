@@ -23,8 +23,6 @@ namespace Application.CommandHandlers
         public Task<Unit> Handle(CreateOrderCommand request, CancellationToken cancellationToken)
         {
             Order newOrder = new();
-            //_unitOfWork.Orders.Add(newOrder);
-            //_unitOfWork.Commit();
 
             foreach (var product in request.ProductsToBuy)
             {

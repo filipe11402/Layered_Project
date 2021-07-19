@@ -60,9 +60,6 @@ namespace Application.Controllers
         {
             IEnumerable<Product> productListToBuy = _mapper.Map<IEnumerable<ProductViewModel>, IEnumerable<Product>>(productsToBuy);
             await _mediator.Send(new CreateOrderCommand(productListToBuy));
-            
-
-            await _unitOfWork.Commit();
 
             return RedirectToAction("Index");
         }
