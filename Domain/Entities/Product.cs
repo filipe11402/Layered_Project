@@ -19,21 +19,11 @@ namespace Domain.Entities
         public int ProductPrice { get; set; }
         public ICollection<Order> Orders { get; set; }
 
-
-
         public Product(string productName, int productPrice)
         {
             this.ProductName = productName;
             this.ProductPrice = productPrice;
             this.Orders = new List<Order>();
-        }
-
-        public void ApplyDiscounts(int discountValue) 
-        {
-            if (discountValue >= this.ProductPrice) 
-            {
-                this.ProductPrice -= discountValue;
-            }
         }
     }
 }

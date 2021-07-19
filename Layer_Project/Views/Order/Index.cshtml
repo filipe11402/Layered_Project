@@ -12,10 +12,13 @@
         @foreach (var order in Model)
         {
         <tr>
+            <th scope="row">Order nº @order.OrderId</th>
             @foreach (var product in order.ProductList)
             {
-                <th scope="row">@product.ProductName</th>
-                <th scope="row">@product.ProductPrice</th>
+                <th scope="row">Product Name</th>
+                <td>@product.ProductName</td>
+                <th scope="row">Product Price</th>
+                <td>@product.ProductPrice€</td>
             }
         </tr>
         }
