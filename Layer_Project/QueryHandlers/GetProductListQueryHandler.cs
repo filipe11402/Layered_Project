@@ -27,7 +27,6 @@ namespace Application.QueryHandlers
         public async Task<IEnumerable<ProductViewModel>> Handle(GetProductListQuery request, CancellationToken cancellationToken)
         {
 
-
             IEnumerable<Product> repositoryProductList = _unitOfWork.Products.GetAll();
 
             IEnumerable<ProductViewModel> viewModelProductList = _mapper.Map<IEnumerable<Product>, IEnumerable<ProductViewModel>>(repositoryProductList);

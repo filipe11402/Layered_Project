@@ -11,6 +11,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Project.Domain.Commands;
+using Project.Domain.Entities;
 using Project.Infrastructure;
 using System;
 using System.Collections.Generic;
@@ -36,11 +37,15 @@ namespace Layer_Project
             services.InfrastructureServices();
             services.AddControllersWithViews();
             services.AddScoped<IGetProductListQuery, GetProductListQuery>();
+            services.AddScoped<IGetOrderListQuery, GetOrderListQuery>();
 
             var configuration = new MapperConfiguration(cfg =>
             {
                 cfg.CreateMap<Product, ProductViewModel>();
                 cfg.CreateMap<ProductViewModel, CreateProductCommand>();
+                cfg.CreateMap<ProductViewModel, Product>();
+                cfg.CreateMap<Order, OrderViewModel>();
+                //cfg.CreateMap<OrderProduct, Order>();
             });
 
             IMapper mapper = configuration.CreateMapper();

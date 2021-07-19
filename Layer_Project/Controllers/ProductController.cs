@@ -1,4 +1,5 @@
-﻿using Application.Queries;
+﻿using Application.Commands;
+using Application.Queries;
 using Application.ViewModels;
 using AutoMapper;
 using Domain.Entities;
@@ -6,6 +7,7 @@ using Infrastructure.Context;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Project.Domain.Commands;
+using Project.Domain.Entities;
 using Project.Domain.Interfaces;
 using Project.Domain.Repositories;
 using Project.Infrastructure.Repositories;
@@ -50,6 +52,20 @@ namespace Application.Controllers
             Product handledProduct = await _mediator.Send(productCommand);
 
             _unitOfWork.Products.Add(handledProduct);
+
+            await _unitOfWork.Commit();
+
+            return RedirectToAction("Index");
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> PostBuy(IEnumerable<ProductViewModel> productsToBuy) 
+        {
+
+            IEnumerable<Product> productListToBuy = _mapper.Map<IEnumerable<ProductViewModel>, IEnumerable<Product>>(productsToBuy);
+
+            await _mediator.Send(new CreateOrderCommand(productListToBuy));
+            
 
             await _unitOfWork.Commit();
 
