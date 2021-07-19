@@ -34,7 +34,6 @@ namespace Layer_Project
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddInfrastructure();
-            services.InfrastructureServices();
             services.AddControllersWithViews();
             services.AddScoped<IGetProductListQuery, GetProductListQuery>();
             services.AddScoped<IGetOrderListQuery, GetOrderListQuery>();
