@@ -33,7 +33,6 @@ namespace Application.Controllers
 
         public async Task<IActionResult> Index()
         {
-
             IEnumerable<ProductViewModel> products = await _mediator.Send(new GetProductListQuery());
 
             return View(products);
@@ -48,11 +47,9 @@ namespace Application.Controllers
         public async Task<IActionResult> PostCreate(ProductViewModel newProduct) 
         {
             CreateProductCommand productCommand = _mapper.Map<ProductViewModel, CreateProductCommand>(newProduct);
-
             Product handledProduct = await _mediator.Send(productCommand);
 
             _unitOfWork.Products.Add(handledProduct);
-
             await _unitOfWork.Commit();
 
             return RedirectToAction("Index");
@@ -61,9 +58,7 @@ namespace Application.Controllers
         [HttpPost]
         public async Task<IActionResult> PostBuy(IEnumerable<ProductViewModel> productsToBuy) 
         {
-
             IEnumerable<Product> productListToBuy = _mapper.Map<IEnumerable<ProductViewModel>, IEnumerable<Product>>(productsToBuy);
-
             await _mediator.Send(new CreateOrderCommand(productListToBuy));
             
 

@@ -13,7 +13,6 @@ namespace Application.Controllers
 {
     public class OrderController : Controller
     {
-
         private readonly IMediator _mediator;
 
         public OrderController(IMediator mediator)

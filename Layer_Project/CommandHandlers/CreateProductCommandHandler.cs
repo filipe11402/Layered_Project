@@ -14,7 +14,6 @@ namespace Project.Domain.CommandHandlers
 {
     public class CreateProductCommandHandler : IRequestHandler<CreateProductCommand, Product>
     {
-
         public async Task<Product> Handle(CreateProductCommand request, CancellationToken cancellationToken)
         {
             Product newProduct = new(request.ProductName, request.ProductPrice);
