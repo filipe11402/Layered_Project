@@ -13,10 +13,10 @@ namespace Project.Domain.Entities
     {
         [Key]
         public int OrderId { get; set; }
-        public ICollection<OrderProduct> ProductList { get; set; }
+        public ICollection<Product> ProductList { get; set; }
         public Order()
         {
-            this.ProductList = new List<OrderProduct>();
+            this.ProductList = new List<Product>();
         }
 
         //public OrderProduct AddProducts(Product productToAdd) 

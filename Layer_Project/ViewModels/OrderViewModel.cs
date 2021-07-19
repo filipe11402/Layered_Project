@@ -10,6 +10,6 @@ namespace Application.ViewModels
     public class OrderViewModel
     {
         public int OrderId { get; set; }
-        public IEnumerable<OrderProduct> ProductList { get; set; }
+        public IEnumerable<Product> ProductList { get; set; }
     }
 }

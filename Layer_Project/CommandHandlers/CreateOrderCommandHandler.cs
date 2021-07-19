@@ -22,16 +22,16 @@ namespace Application.CommandHandlers
 
         public Task<Unit> Handle(CreateOrderCommand request, CancellationToken cancellationToken)
         {
-            //Order newOrder = new();
+            Order newOrder = new();
             //_unitOfWork.Orders.Add(newOrder);
             //_unitOfWork.Commit();
 
-            //foreach (var product in request.ProductsToBuy) 
-            //{
-            //    OrderProduct newOrderProduct = new() { Order=newOrder, Product=product};
-            //    newOrder.ProductList.Add(newOrderProduct);
-            //    _unitOfWork.Orders.Update(newOrder);
-            //}
+            foreach (var product in request.ProductsToBuy)
+            {
+                newOrder.ProductList.Add(product);
+            }
+            _unitOfWork.Orders.Update(newOrder);
+            _unitOfWork.Commit();
 
             return Task.FromResult(Unit.Value);
         }

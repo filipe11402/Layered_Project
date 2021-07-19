@@ -17,7 +17,7 @@ namespace Domain.Entities
         public string ProductName { get; set; }
         [Required]
         public int ProductPrice { get; set; }
-        public ICollection<OrderProduct> Orders { get; set; }
+        public ICollection<Order> Orders { get; set; }
 
 
 
@@ -25,6 +25,7 @@ namespace Domain.Entities
         {
             this.ProductName = productName;
             this.ProductPrice = productPrice;
+            this.Orders = new List<Order>();
         }
 
         public void ApplyDiscounts(int discountValue) 

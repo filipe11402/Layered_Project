@@ -16,14 +16,11 @@ namespace Project.Infrastructure.Repositories
         public IProductRepository Products { get; }
         public IOrderRepository Orders { get; }
 
-        public IOrderProductRepository OrderProducts { get; }
-
-        public UnitOfWork(ApplicationDbContext productDb, IProductRepository products, IOrderRepository orders, IOrderProductRepository orderProducts)
+        public UnitOfWork(ApplicationDbContext productDb, IProductRepository products, IOrderRepository orders)
         {
             _productDb = productDb;
             Products = products;
             Orders = orders;
-            OrderProducts = orderProducts;
         }
 
         
