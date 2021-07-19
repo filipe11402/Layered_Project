@@ -11,7 +11,6 @@ namespace Project.Domain.Interfaces
     {
         IProductRepository Products { get; }
         IOrderRepository Orders { get; }
-        IOrderProductRepository OrderProducts { get; }
         Task<int> Commit();
     }
 }
