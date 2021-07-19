@@ -32,6 +32,47 @@ namespace Project.Infrastructure.Migrations
 
                     b.ToTable("Products");
                 });
+
+            modelBuilder.Entity("OrderProduct", b =>
+                {
+                    b.Property<int>("OrdersOrderId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("ProductListProductID")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("OrdersOrderId", "ProductListProductID");
+
+                    b.HasIndex("ProductListProductID");
+
+                    b.ToTable("OrderProduct");
+                });
+
+            modelBuilder.Entity("Project.Domain.Entities.Order", b =>
+                {
+                    b.Property<int>("OrderId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("OrderId");
+
+                    b.ToTable("Orders");
+                });
+
+            modelBuilder.Entity("OrderProduct", b =>
+                {
+                    b.HasOne("Project.Domain.Entities.Order", null)
+                        .WithMany()
+                        .HasForeignKey("OrdersOrderId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Domain.Entities.Product", null)
+                        .WithMany()
+                        .HasForeignKey("ProductListProductID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
 #pragma warning restore 612, 618
         }
     }
