@@ -1,4 +1,5 @@
 ﻿using Application.Commands;
+using Application.Mediator.Commands;
 using Application.Queries;
 using Application.ViewModels;
 using AutoMapper;
@@ -61,6 +62,18 @@ namespace Application.Controllers
             IEnumerable<Product> productListToBuy = _mapper.Map<IEnumerable<ProductViewModel>, IEnumerable<Product>>(productsToBuy);
             await _mediator.Send(new CreateOrderCommand(productListToBuy));
 
+            return RedirectToAction("Index");
+        }
+
+        public IActionResult Update() 
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> PostUpdate(ProductViewModel updatedProduct) 
+        {
+            await _mediator.Send(new UpdateProductCommand(updatedProduct));
             return RedirectToAction("Index");
         }
     }

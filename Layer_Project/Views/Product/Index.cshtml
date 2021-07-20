@@ -7,17 +7,18 @@
 {
 
 <form method="POST" asp-action="PostBuy">
-    @for(int counter = 0;counter < Model.Count();counter++)
+    @for (int counter = 0; counter < Model.Count(); counter++)
     {
-    @Html.HiddenFor(product => product.ToList()[counter].ProductId, new { @readonly="readonly"})
-    <div class="form-group">
-        <label>Nome do Produto</label>
-        @Html.TextBoxFor(product => product.ToList()[counter].ProductName, new { @readonly="readonly", @class= "form-control" })
-    </div>
-    <div class="form-group">
-        <label>Preço do Produto</label>
-        @Html.TextBoxFor(product => product.ToList()[counter].ProductPrice, new { @readonly = "readonly", @class = "form-control" })
-    </div>
+        @Html.HiddenFor(product => product.ToList()[counter].ProductId, new { @readonly = "readonly" })
+        <div class="form-group">
+            <label>Nome do Produto</label>
+            @Html.TextBoxFor(product => product.ToList()[counter].ProductName, new { @readonly = "readonly", @class = "form-control" })
+        </div>
+        <div class="form-group">
+            <label>Preço do Produto</label>
+            @Html.TextBoxFor(product => product.ToList()[counter].ProductPrice, new { @readonly = "readonly", @class = "form-control" })
+        </div>
+        <a asp-action="Update" asp-controller="Product" asp-route-Id="@Model.ToList()[counter].ProductId" class="btn btn-primary mx-1">Update Product</a>
     }
     <button type="submit" class="btn btn-primary">Create</button>
 </form>
