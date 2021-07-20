@@ -12,5 +12,6 @@ namespace Project.Domain.Repositories
         IEnumerable<Product> GetAll();
 
         Product Add(Product newProduct);
+        void UpdateProduct(Product updatedProduct);
     }
 }

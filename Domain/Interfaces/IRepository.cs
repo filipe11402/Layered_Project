@@ -10,5 +10,6 @@ namespace Domain.Interfaces
     {
         public IEnumerable<T> GetAll();
         public T Add(T newT);
+        public void UpdateProduct(T updatedProduct);
     }
 }
