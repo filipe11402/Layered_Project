@@ -30,5 +30,15 @@ namespace Project.Infrastructure.Repositories
             _productDb.Add(newProduct);
             return newProduct;
         }
+
+        public void UpdateProduct(Product updatedProduct) 
+        {
+            _productDb.Update(updatedProduct);
+        }
+
+        public Product GetById(int? productId)
+        {
+            return _productDb.Products.Find(productId);
+        }
     }
 }
