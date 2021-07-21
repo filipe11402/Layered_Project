@@ -10,7 +10,7 @@ namespace Project.Domain.Repositories
     public interface IProductRepository
     {
         IEnumerable<Product> GetAll();
-
+        Product GetById(int? productId);
         Product Add(Product newProduct);
         void UpdateProduct(Product updatedProduct);
     }

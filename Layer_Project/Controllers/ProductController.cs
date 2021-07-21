@@ -1,5 +1,6 @@
 ﻿using Application.Commands;
 using Application.Mediator.Commands;
+using Application.Mediator.Queries;
 using Application.Queries;
 using Application.ViewModels;
 using AutoMapper;
@@ -65,9 +66,11 @@ namespace Application.Controllers
             return RedirectToAction("Index");
         }
 
-        public IActionResult Update() 
+        public async Task<IActionResult> Update(int? Id) 
         {
-            return View();
+
+            ProductViewModel product = await _mediator.Send(new GetProductQuery(Id));
+            return View(product);
         }
 
         [HttpPost]

@@ -35,5 +35,10 @@ namespace Project.Infrastructure.Repositories
         {
             _productDb.Update(updatedProduct);
         }
+
+        public Product GetById(int? productId)
+        {
+            return _productDb.Products.Find(productId);
+        }
     }
 }
